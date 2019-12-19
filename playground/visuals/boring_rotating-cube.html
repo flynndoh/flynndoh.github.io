@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
     <title>The Playground - Point Inside Triangle</title>
+
+    <link href="../visuals.css" rel="stylesheet">
 </head>
 
 <body>
     <script src="../js/three.js"></script>
-    <script>
+
+    <script type="module">
+
         init();
         animate();
 
@@ -27,6 +31,7 @@
             var geometry = new THREE.BoxGeometry(1, 1, 1);
             var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
             var cube = new THREE.Mesh(geometry, material);
+            cube.name = "mainCube";
             scene.add(cube);
 
             camera.position.z = 5;
@@ -41,6 +46,9 @@
 
         function animate() {
             requestAnimationFrame(animate);
+            scene.getObjectByName("mainCube").rotation.x += 0.01;
+            scene.getObjectByName("mainCube").rotation.y += 0.01;
+
             render();
         }
 

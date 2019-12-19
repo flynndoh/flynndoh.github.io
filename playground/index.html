@@ -18,10 +18,11 @@
 
 <body>
 
-    <div class="d-flex min-vh-100">
+    <div class="d-flex">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-2 bg-dark text-white">
+            <div class="row flex-nowrap min-vh-100">
+
+                <div id="panel" class="col-lg-2 bg-dark text-white">
                     <div class="pt-3">
                         <h2 class="text-warning title">
                             <a class="text-warning" href="../index.html"><i class="material-icons">chevron_left</i></a>
@@ -31,9 +32,10 @@
                     <div id="content"></div>
                 </div>
 
-                <div>
+                <div class="col-lg-10 p-0">
                     <iframe id="viewer" name="viewer" allowfullscreen allowvr onmousewheel=""></iframe>
                 </div>
+
             </div>
         </div>
     </div>
@@ -42,8 +44,6 @@
 
     <script>
         var content = document.getElementById('content');
-        var container = document.createElement('div');
-        content.appendChild(container);
 
         var links = {};
         var selected = null;
@@ -61,12 +61,12 @@
 
                 header.textContent = key;
                 header.setAttribute('data-category', key);
-                container.appendChild(header);
+                content.appendChild(header);
 
                 for (var i = 0; i < section.length; i++) {
                     var file = section[i];
                     var link = createLink(file);
-                    container.appendChild(link);
+                    content.appendChild(link);
                     links[file] = link;
                 }
             }

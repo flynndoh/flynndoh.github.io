@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
 
-
 * {
     box-sizing: inherit;
     transition-property: all;
@@ -11,6 +10,8 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 a:active {
@@ -61,8 +62,9 @@ h3 {
     font-size:1rem;
     color: #FFC107;
     text-transform: uppercase;
+    padding-top: 1rem;
+    margin-bottom: 0;
 }
-
 
 a.text-warning:focus, a.text-warning:hover {
     color: #FFC107 !important;
@@ -107,6 +109,22 @@ a.text-warning:focus, a.text-warning:hover {
     stroke-dasharray: 15, 310;
     stroke-dashoffset: 48;
     transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#panel #content {
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+#viewer,
+iframe {
+    border: 0px;
+    left: 0;
+    right: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
 .noselect {
