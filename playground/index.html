@@ -5,26 +5,111 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Playground</title>
+    <title>flynndoh - playground</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link href="css/playground.css" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="../css/main.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <div id="panel">
-        <div id="header">
-            <div id="sections">
-                <a href="../index.html">Back</a>
+    <div class="d-flex min-vh-100">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 bg-dark text-white">
+                    <div class="pt-3">
+                        <h2 class="text-warning title">
+                            <a class="text-warning" href="../index.html"><i class="material-icons">chevron_left</i></a>
+                            <b>EXPERIMENTS.</b>
+                        </h2>
+                    </div>
+                    <div id="content"></div>
+                </div>
+
+                <div>
+                    <iframe id="viewer" name="viewer" allowfullscreen allowvr onmousewheel=""></iframe>
+                </div>
             </div>
         </div>
-        <div id="content"></div>
     </div>
 
-    <iframe id="viewer" name="viewer" allowfullscreen allowvr onmousewheel="" src="visuals/point_inside_triangle.html"></iframe>
+    <script src="js/files.js"></script>
+
+    <script>
+        var content = document.getElementById('content');
+        var container = document.createElement('div');
+        content.appendChild(container);
+
+        var links = {};
+        var selected = null;
+
+        createElements();
+
+        if (window.location.hash !== '' && links[window.location.hash.substring(1)]) {
+            loadFile(window.location.hash.substring(1));
+        }
+
+        function createElements() {
+            for (var key in files) {
+                var section = files[key];
+                var header = document.createElement('h3');
+
+                header.textContent = key;
+                header.setAttribute('data-category', key);
+                container.appendChild(header);
+
+                for (var i = 0; i < section.length; i++) {
+                    var file = section[i];
+                    var link = createLink(file);
+                    container.appendChild(link);
+                    links[file] = link;
+                }
+            }
+        }
+
+        function createLink(file) {
+            var link = document.createElement('a');
+            link.className = 'link';
+            link.href = 'visuals/' + file + '.html';
+            link.textContent = getName(file);
+            link.setAttribute('target', 'viewer');
+            link.addEventListener('click', function (event) {
+                if (event.button !== 0 || event.ctrlKey || event.altKey || event.metaKey) {
+                    return;
+                }
+                selectFile(file);
+            });
+            return link;
+        }
+
+        function loadFile(file) {
+            selectFile(file);
+            viewer.src = 'visuals/' + file + '.html';
+        }
+
+        function selectFile(file) {
+            if (selected !== null) {
+                links[selected].classList.remove('selected');
+            }
+
+            links[file].classList.add('selected');
+            window.location.hash = file;
+            viewer.focus();
+            selected = file;
+        }
+
+        function getName(file) {
+            var name = file.split('_');
+            name.shift();
+            return name.join(' / ');
+        }
+    </script>
+
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
