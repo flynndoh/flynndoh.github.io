@@ -112,17 +112,17 @@
 		{
 			"2d" : 
 			{
-				"creditsUrl" : "../../../stage/glues/melown-cities-cz@3_melown-benatky-nad-jizerou/{lod}-{x}-{y}.credits?0",
-				"maskUrl" : "../../../stage/glues/melown-cities-cz@3_melown-benatky-nad-jizerou/{lod}-{x}-{y}.mask?0",
-				"metaUrl" : "../../../stage/glues/melown-cities-cz@3_melown-benatky-nad-jizerou/{lod}-{x}-{y}.2dmeta?0",
-				"orthoUrl" : "../../../stage/glues/melown-cities-cz@3_melown-benatky-nad-jizerou/{lod}-{x}-{y}-{sub}.ortho?0"
+				"creditsUrl" : "https://cdn.melown.com/stage/glues/melown-cities-cz@3_melown-benatky-nad-jizerou/{lod}-{x}-{y}.credits?0",
+				"maskUrl" : "https://cdn.melown.com/stage/glues/melown-cities-cz@3_melown-benatky-nad-jizerou/{lod}-{x}-{y}.mask?0",
+				"metaUrl" : "https://cdn.melown.com/stage/glues/melown-cities-cz@3_melown-benatky-nad-jizerou/{lod}-{x}-{y}.2dmeta?0",
+				"orthoUrl" : "https://cdn.melown.com/stage/glues/melown-cities-cz@3_melown-benatky-nad-jizerou/{lod}-{x}-{y}-{sub}.ortho?0"
 			},
 			"id" : [ "melown-cities-cz@3", "melown-benatky-nad-jizerou" ],
 			"lodRange" : [ 18, 22 ],
-			"meshUrl" : "../../../stage/glues/melown-cities-cz@3_melown-benatky-nad-jizerou/{lod}-{x}-{y}.bin?0",
-			"metaUrl" : "../../../stage/glues/melown-cities-cz@3_melown-benatky-nad-jizerou/{lod}-{x}-{y}.meta?0",
-			"navUrl" : "../../../stage/glues/melown-cities-cz@3_melown-benatky-nad-jizerou/{lod}-{x}-{y}.nav?0",
-			"textureUrl" : "../../../stage/glues/melown-cities-cz@3_melown-benatky-nad-jizerou/{lod}-{x}-{y}-{sub}.jpg?0",
+			"meshUrl" : "https://cdn.melown.com/stage/glues/melown-cities-cz@3_melown-benatky-nad-jizerou/{lod}-{x}-{y}.bin?0",
+			"metaUrl" : "https://cdn.melown.com/stage/glues/melown-cities-cz@3_melown-benatky-nad-jizerou/{lod}-{x}-{y}.meta?0",
+			"navUrl" : "https://cdn.melown.com/stage/glues/melown-cities-cz@3_melown-benatky-nad-jizerou/{lod}-{x}-{y}.nav?0",
+			"textureUrl" : "https://cdn.melown.com/stage/glues/melown-cities-cz@3_melown-benatky-nad-jizerou/{lod}-{x}-{y}-{sub}.jpg?0",
 			"tileRange" : 
 			[
 				[ 70930, 44284 ],
@@ -132,17 +132,17 @@
 		{
 			"2d" : 
 			{
-				"creditsUrl" : "../../../stage/glues/melown-cities-cz@3_melown-cesky-krumlov@2/{lod}-{x}-{y}.credits?0",
-				"maskUrl" : "../../../stage/glues/melown-cities-cz@3_melown-cesky-krumlov@2/{lod}-{x}-{y}.mask?0",
-				"metaUrl" : "../../../stage/glues/melown-cities-cz@3_melown-cesky-krumlov@2/{lod}-{x}-{y}.2dmeta?0",
-				"orthoUrl" : "../../../stage/glues/melown-cities-cz@3_melown-cesky-krumlov@2/{lod}-{x}-{y}-{sub}.ortho?0"
+				"creditsUrl" : "https://cdn.melown.com/stage/glues/melown-cities-cz@3_melown-cesky-krumlov@2/{lod}-{x}-{y}.credits?0",
+				"maskUrl" : "https://cdn.melown.com/stage/glues/melown-cities-cz@3_melown-cesky-krumlov@2/{lod}-{x}-{y}.mask?0",
+				"metaUrl" : "https://cdn.melown.com/stage/glues/melown-cities-cz@3_melown-cesky-krumlov@2/{lod}-{x}-{y}.2dmeta?0",
+				"orthoUrl" : "https://cdn.melown.com/stage/glues/melown-cities-cz@3_melown-cesky-krumlov@2/{lod}-{x}-{y}-{sub}.ortho?0"
 			},
 			"id" : [ "melown-cities-cz@3", "melown-cesky-krumlov@2" ],
 			"lodRange" : [ 16, 23 ],
-			"meshUrl" : "../../../stage/glues/melown-cities-cz@3_melown-cesky-krumlov@2/{lod}-{x}-{y}.bin?0",
-			"metaUrl" : "../../../stage/glues/melown-cities-cz@3_melown-cesky-krumlov@2/{lod}-{x}-{y}.meta?0",
-			"navUrl" : "../../../stage/glues/melown-cities-cz@3_melown-cesky-krumlov@2/{lod}-{x}-{y}.nav?0",
-			"textureUrl" : "../../../stage/glues/melown-cities-cz@3_melown-cesky-krumlov@2/{lod}-{x}-{y}-{sub}.jpg?0",
+			"meshUrl" : "https://cdn.melown.com/stage/glues/melown-cities-cz@3_melown-cesky-krumlov@2/{lod}-{x}-{y}.bin?0",
+			"metaUrl" : "https://cdn.melown.com/stage/glues/melown-cities-cz@3_melown-cesky-krumlov@2/{lod}-{x}-{y}.meta?0",
+			"navUrl" : "https://cdn.melown.com/stage/glues/melown-cities-cz@3_melown-cesky-krumlov@2/{lod}-{x}-{y}.nav?0",
+			"textureUrl" : "https://cdn.melown.com/stage/glues/melown-cities-cz@3_melown-cesky-krumlov@2/{lod}-{x}-{y}-{sub}.jpg?0",
 			"tileRange" : 
 			[
 				[ 17685, 11275 ],
